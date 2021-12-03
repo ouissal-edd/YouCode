@@ -1,0 +1,28 @@
+{
+  "brief": [
+    {
+      "contexte": "projet sass",
+      "technologie": "php",
+      "id": 1
+    }
+  ],
+  "resultTest": [],
+  "users": [
+    {
+      "full_name": "ouissal",
+      "CIN": "HH4466",
+      "age": "22",
+      "email": "ouiss@gmail.com",
+      "password": "qFnBklni",
+      "id": 1
+    },
+    {
+      "full_name": "wissal",
+      "CIN": "HHYFGH",
+      "age": "22",
+      "email": "sdfghj@gmail.com",
+      "password": "7YvCCg4Q",
+      "id": 2
+    }
+  ]
+}
