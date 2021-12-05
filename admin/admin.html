@@ -2,21 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>yc</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="admin.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    enter context for sas
-    <textarea name="" id="Context" cols="30" rows="10"></textarea>
-    <input type="text" name="" id="technologie">
-    <button id="submit">submit</button>
+
+
+    <nav>
+        <!-- navbar content here  -->
+    </nav>
+
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="../images/y2.jpg">
+                </div>
+                <a href="#user"><img class="circle" src="../images/logo.png"></a>
+                <a href="#name"><span class="white-text name">Admin</span></a>
+                <a href="#email"><span class="white-text email">Youcode@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>List candidat</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li><a href="#brieef">Brief</a></li>
+
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Subheader</a></li>
+        <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+    <div class="row" style="width: 70%; margin: auto;">
+        <h1 class="align-center">Brief</h1>
+        <div class="input-field col s12">
+            <textarea id="Context" class="materialize-textarea"></textarea>
+            <label for="Context">Contexte</label>
+        </div>
+
+
+        <div class="input-field col s12">
+            <input id="technologie" type="text" class="validate">
+            <label class="active" for="technologie">technologie</label>
+        </div>
+        <button id="submit" class="btn waves-light ">submit</button>
+
+    </div>
+
+    <table style="width: 70%; margin: auto;">
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>CIN</th>
+              <th>test online</th>
+              <th>test Motivation</th>
+              <th>test Administratif</th>
+              <th>rendu sass</th>
+
+          </tr>
+        </thead>
+
+        <tbody id="candidat">
+         
+        </tbody>
+      </table>
+            
+
 
 
     <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/init.js"></script>
     <script src="admin.js"></script>
+
+
 </body>
 
 </html>

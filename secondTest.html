@@ -9,56 +9,61 @@
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/Test.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
-    <div class="row">
-        <div id="quiztwo">
-            <h2 id="questiontwo"></h2>
 
-            <h3 id="scoretwo"></h3>
+    <div class="My_logo">
+        <a id="logo-container" href="#" class="brand-logo"><img id="logo" src="images/logo.png" alt=""></a>
+    </div>
+    <h4 class="center-align">S.G</h4>
 
-            <div class="choices">
-                <button id="gues0" class="btn">
-                    <p id="choic0"></p>
-                </button>
+    <div class="row myrow">
+        <div class="col s12 ">
+            <div id="quiztwo" class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span id="questiontwo" class="card-title cc"></span>
+                    <div class="choices">
+                        <button id="gues0" class="btn">
+                            <p id="choic0"></p>
+                        </button>
 
-                <button id="gues1" class="btn">
-                    <p id="choic1"></p>
-                </button>
+                        <button id="gues1" class="btn">
+                            <p id="choic1"></p>
+                        </button>
 
-                <button id="gues2" class="btn">
-                    <p id="choic2"></p>
-                </button>
+                        <button id="gues2" class="btn">
+                            <p id="choic2"></p>
+                        </button>
 
-                <button id="gues3" class="btn">
-                    <p id="choic3"></p>
-                </button>
+                        <button id="gues3" class="btn">
+                            <p id="choic3"></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <p id="progres"></p>
+
+                </div>
             </div>
-
-            <p id="progres"></p>
-
         </div>
+    </div>
 
-        <!-- Display Test Number two  -->
-        <div id="motivation">
-            <h1>Prouve your motivation <i class="far fa-question-circle"></i></h1>
 
-            <h2 id="questionMotivation"></h2>
+
+    <!-- Display Test Number two  -->
+    <div id="motivation" class="card blue-grey darken-1">
+        <h1>Prouve your motivation <i class="far fa-question-circle"></i></h1>
+
+        <h2 id="questionMotivation"></h2>
+        <div class="input-field col s12">
             <textarea name="" id="answerMotivation" cols="30" rows="10"></textarea>
-            <button id="msub">submit</button>
-        </div>
-
-        <div id="technique">
-            <h2>Context projet</h2>
-            <p class="context"></p>
-
-
 
         </div>
+        <button class="btn waves-light " id="msub" type="submit">submit
 
-
+    </div>
 
     </div>
 
@@ -67,18 +72,7 @@
 </body>
 
 
-<footer>
 
-
-
-    <div class="footer-copyright">
-        <div class="container">
-            <a class="footerr text-lighten-3 " href="#"> <span class="y">You</span> <span class="c">Code</span> </a>
-        </div>
-    </div>
-
-
-</footer>
 
 
 <!--  Scripts-->

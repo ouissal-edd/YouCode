@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div style="  background-image: url('images/back.png');">
+    <div style="  background-image: url('images/back.png'); min-width: 100vh;">
         <div>
             <nav class="light-blue lighten-1" role="navigation">
                 <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo"><img id="logo"
@@ -34,58 +34,45 @@
                     <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
+            </nav>
 
         </div>
 
 
-        <div class="section">
-            <div class="container pt-60">
-                <h1 class="titleone" style="text-align: center;">Register Form</h1>
+        <div class="sectionLogin">
+
+            <!-- --------------------------------LOGIN---------------------------------------------------------------------------------------------- -->
+
+            <div class="container pt-60" style="width: 50%;">
+                <h1 class="titleone" style="text-align: center;">Login Form</h1>
 
                 <div class="row">
 
                     <form class="col s12" action="#">
                         <div class="row">
-
-                            <div class="input-field col s6">
-                                <input id="fullName" type="text" class="validate">
-                                <label>full name</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="CIN" type="text" class="validate">
-                                <label for="CIN">CIN</label>
+                            <div class="input-field col s12">
+                                <input id="mail_log" type="text" class="validate">
+                                <label for="login">Login</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s6">
-                                <input id="age" type="number" class="validate">
-                                <label for="age">Age</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Email</label>
+
+                            <div class="input-field col s12">
+                                <input id="mdp" type="password" class="validate">
+                                <label for="mdp">Mot de passe</label>
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="input-field col s12">
-                                <textarea id="adress" class="materialize-textarea"></textarea>
-                                <label for="textarea1">Address</label>
-                            </div>
-                        </div>
                         <br>
                         <div class="row">
                             <div class="col s12 mt-25">
-                                <button class="btn waves-light " id="add" type="submit">Register Now
-                                    <i class="material-icons right">send</i>
+                                <button class="btn waves-light " id="login" type="submit">Login
                                 </button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-
-
         </div>
 
         <br><br>
@@ -101,10 +88,10 @@
 
 
     <!--  Scripts-->
-    <script src="js/register.js"></script>
+    <script src="js/login.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="js/materialize.js"></script>
-    <!-- <script src="js/init.js"></script> -->
+    <script src="js/init.js"></script>
 
 </body>
 

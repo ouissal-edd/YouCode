@@ -95,6 +95,13 @@ padding: 1%;
 .validate{
     color: #004eff;
 }
+.sectionLogin{
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+}
+.butun{
+  border-radius: 20px !important;
+}
   
 
   

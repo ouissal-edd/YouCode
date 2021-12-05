@@ -76,11 +76,10 @@ add.addEventListener('click', async e => {
 
     console.log(full_name, cin, age, email, password, adress);
     const user = new User(full_name, cin, age, email, password, adress);
-    let cc = await user.usersData();
-    console.log(cc);
-    if (age < 35 && age >= 18 && cc.length == 0) {
+    let ChekifExist = await user.usersData();
+    if (age < 35 && age >= 18 && ChekifExist.length == 0) {
         user.postData();
-    } else if (cc.length !== 0) {
+    } else if (ChekifExist.length !== 0) {
         console.log("exist")
     }
 })

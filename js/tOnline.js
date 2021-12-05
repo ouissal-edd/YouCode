@@ -11,8 +11,8 @@ class Question {
 let questions = [
     new Question("Quel est le nombre manquant ? 56 63 – 36 65 – 49 86 – 68 ..", ["86", "68", "59", "94"], "94"),
     new Question("Maçon est à la maison ce que boulanger est à", ["Four", "Farine", "Pain", "Levure"], "Pain"),
-    new Question(" Vincent a rendez-vous chaque jour de la semaine à 14 heures avec son dentiste mais ce dernier est systématiquement en retard. Le lundi, Vincent a été reçu à 14 h 30, le mardi à 15 h 20, le mercredi à 16 h 30. A quelle heure sera reçu Vincent le jeudi ?", ["17h00", "20h10", "19h30", "18h00"], "18h00"),
-    new Question("Quelle lettre vient à la place du point d’interrogation ? U – D – T – Q – C – S – S – H – ?", ["I", "J", "R", "N"], "N"),
+    new Question("  A quelle heure sera reçu Vincent le jeudi ?", ["17h00", "20h10", "19h30", "18h00"], "18h00"),
+    new Question("Quelle lettre vient au ? U – D – N– H – ?", ["I", "J", "R", "N"], "N"),
     new Question("sssss", ["I", "J", "P", "N"], "P")
 
 ];
@@ -52,8 +52,8 @@ const display = {
     },
     endQuiz: function () {
         endQuizHTML = `
-        <h1>Quiz terminé !</h1>
-        <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>`;
+        <h1>test terminé !</h1>
+        <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length} </h3>`;
         this.elementShown("quiz", endQuizHTML);
     },
     question: function () {
@@ -85,11 +85,22 @@ const display = {
     saveData: function () {
         let data = [];
 
-        data.push({
-            resulFisrtTest: quiz.score
+
+        let infoCandidat = localStorage.getItem('StoredData');
+        var infoCandidat1 = JSON.parse(infoCandidat);
+
+        infoCandidat1.forEach(element => {
+            data.push({
+                Name: element.full_name,
+                CIN: element.CIN,
+                resulFisrtTest: quiz.score
+
+            });
+            var dataJSON = JSON.stringify(data);
+            localStorage.setItem('StoredData', dataJSON);
+
         });
-        var dataJSON = JSON.stringify(data);
-        localStorage.setItem('StoredData', dataJSON);
+
     }
 
 };
@@ -114,3 +125,13 @@ let quiz = new Quiz(questions);
 quizApp();
 
 console.log(quiz);
+const onlineTest = document.getElementById("FirstTest");
+const start = document.getElementById("start");
+const btn = document.getElementById("strt");
+btn.addEventListener("click", e => {
+    e.preventDefault();
+    onlineTest.style.display = "block";
+    start.style.display = "none";
+
+
+})

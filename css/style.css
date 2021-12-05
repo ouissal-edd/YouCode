@@ -30,38 +30,43 @@ nav .brand-logo {
 }
 
 #sectionZ{
-  /* background-image: url("../images/y1.jpg");
-  min-height: 80vh; */
   position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 100px;
-  box-sizing: border-box;
-  background: linear-gradient(180deg,#0058B3,#2196f3),url(images/c.jpg) !important;
-  background-blend-mode: screen;
-
-
-
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    box-sizing: border-box;
+    background: linear-gradient(
+180deg,#0058B3,#2196f3),url(images/c.jpg) !important;
+    background-blend-mode: screen;
 }
+
+
 
 #sectionZ .container{
-  max-width: 700px;
+  max-width: 760px;
 }
 #sectionZ h2{
-  font-size: 2.5em !important;
+  font-size: 35px !important;
   color: #fff;
+  text-align: center;
+  padding-top: 7%;
+
 }
 #sectionZ p {
-  font-size: 1.2em !important ;
+  font-size: 16px !important ;
   color: #fff;
+  text-align: center;
+  font-weight: 400;
 }
 #sectionZ img {
   z-index: 1000;
   position: relative;
-  max-width: 400px;
+  max-width: 560px;
+}
+.wave_gris{
+  background-color: #f3f4f5 !important;
 }
 
 .wave{
@@ -100,7 +105,7 @@ nav .brand-logo {
 }
 .titleone {
   color: black;
-  font-size: 2.5rem;
+  font-size: 35px;
 }
 #you{
   font-weight: bold;
@@ -122,7 +127,9 @@ background: rgba(0,0,0,.6) !important;
   color: #fff;
 }
 
-
+.section{
+  margin-bottom: 7%;
+}
 
 /* section two */
 .cardmini{
@@ -139,10 +146,7 @@ background: rgba(0,0,0,.6) !important;
   width: 100%;
 }
    
-/* Motivation */
-#motivation{
-  display: none;
-}
+
 .sectionCard{
 width: 80%;
 }
@@ -157,8 +161,43 @@ width: 80%;
   color: #007bff !important ;
   font-weight: bold !important;
 }
+ .butun{
+   border-radius: 20px !important;
+ }
 
-
+.indicators{
+  display: none !important;
+}
+.image_row img,.image_row{
+  width: 100%;
+}
+.paragraph{
+  background-color: #0058B3;
+  text-align: center;
+  color: #fff;
+  padding: 1% !important;
+}
+.paragraph h2 {
+  font-size: 30px;
+}
+.paragraph p {
+  font-size: 15px;
+}
+.paragraph .p {
+  font-size: 16px;
+ margin: auto;
+width: 87%;
+padding-bottom: 12.5%;
+}
+.roww{
+  margin-bottom: 13%;
+}
+.caption h3{
+  font-size: 30px !important;
+}
+.caption h5{
+  font-size: 23px !important;
+}
 
 
 

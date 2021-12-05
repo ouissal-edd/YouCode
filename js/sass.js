@@ -1,7 +1,13 @@
 const add = document.getElementById("soumettre");
 class Brief {
-    constructor(answer) {
-        this.answer = answer;
+    constructor(Nom, CIN, onlineTest, Motivation, resultAdministration, renduSass) {
+        this.Nom = Nom;
+        this.CIN = CIN;
+        this.onlineTest = onlineTest;
+        this.Motivation = Motivation;
+        this.resultAdministration = resultAdministration;
+        this.renduSass = renduSass;
+
     }
     shwoData() {
 
@@ -33,7 +39,12 @@ class Brief {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         var raw = JSON.stringify({
-            "reponse": this.answer,
+            "Nom_complet": this.Nom,
+            "CIN": this.CIN,
+            "testOnline": this.onlineTest,
+            "testMotivation": this.Motivation,
+            "testAdministratif": this.resultAdministration,
+            "testSass": this.renduSass,
         });
 
         var requestOptions = {
@@ -43,7 +54,7 @@ class Brief {
             redirect: 'follow'
         };
 
-        fetch("http://localhost:8000/brief", requestOptions)
+        fetch("http://localhost:8000/resultTest", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
@@ -55,17 +66,16 @@ class Brief {
         let data = [];
         let allTest = localStorage.getItem('StoredData');
         var allTest1 = JSON.parse(allTest);
-
+        var link = document.getElementById("link_rendu").value;
         allTest1.forEach(element => {
-            const online = element.onlineTest;
-            const motivation = element.Motivation;
-            const administration = element.resultAdministration;
 
             data.push({
-                onlineTest: online,
-                Motivation: motivation,
-                resultAdministration: administration,
-                renduSass: this.answer
+                Name: element.Name,
+                CIN: element.CIN,
+                onlineTest: element.onlineTest,
+                Motivation: element.Motivation,
+                resultAdministration: element.resultAdministration,
+                renduSass: link
 
             });
             var dataJSON = JSON.stringify(data);
@@ -74,7 +84,6 @@ class Brief {
         });
     }
 
-
 }
 
 const brief = new Brief();
@@ -82,9 +91,22 @@ brief.shwoData();
 
 add.addEventListener('click', e => {
     e.preventDefault();
-    var answer = document.getElementById("link_rendu").value;
-    const brief = new Brief(answer);
+    const brief = new Brief();
     brief.postResultatStoreg();
+    toPostData();
+
+});
+
+function toPostData() {
+
+    let allTest = localStorage.getItem('StoredData');
+    var allTest1 = JSON.parse(allTest);
+
+    allTest1.forEach(element => {
+        const brief = new Brief(element.Name,  element.CIN ,element.onlineTest, element.Motivation, element.resultAdministration, element.renduSass);
+        brief.postAnswer();
+        console.log(element.Name,  element.CIN ,element.onlineTest, element.Motivation, element.resultAdministration, element.renduSass)
 
 
-})
+    });
+}

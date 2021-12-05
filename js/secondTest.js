@@ -122,9 +122,10 @@ saveData.addEventListener("click", e => {
     var FirstTest1 = JSON.parse(FirstTest);
 
     FirstTest1.forEach(element => {
-        const online = element.resulFisrtTest;
         data.push({
-            onlineTest: online,
+            Name: element.Name,
+            CIN: element.CIN,
+            onlineTest: element.resulFisrtTest,
             Motivation: rep.value,
             resultAdministration: quizadministration.score,
 

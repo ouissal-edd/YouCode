@@ -6,7 +6,26 @@
       "id": 1
     }
   ],
-  "resultTest": [],
+  "resultTest": [
+    {
+      "Nom_complet": "wissal",
+      "CIN": "HHYFGH",
+      "testOnline": 5,
+      "testMotivation": "motiv",
+      "testAdministratif": 3,
+      "testSass": "giit",
+      "id": 1
+    },
+    {
+      "Nom_complet": "ouissal",
+      "CIN": "HH4466",
+      "testOnline": 5,
+      "testMotivation": "Youcode",
+      "testAdministratif": 3,
+      "testSass": "azerty",
+      "id": 2
+    }
+  ],
   "users": [
     {
       "full_name": "ouissal",
@@ -23,6 +42,14 @@
       "email": "sdfghj@gmail.com",
       "password": "7YvCCg4Q",
       "id": 2
+    },
+    {
+      "full_name": "ouissal",
+      "CIN": "HH4466",
+      "age": "22",
+      "email": "ouissal.eddouj21@gmail.com",
+      "password": "OJPYMZG$",
+      "id": 3
     }
   ]
 }
